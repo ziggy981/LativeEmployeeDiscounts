@@ -2,7 +2,7 @@
 
 ![Solution Projects](https://user-images.githubusercontent.com/44898569/116045602-dc77ed00-a67a-11eb-82c6-ae1b2774c24e.PNG)
 
-For this challenge, a simple Web Application (.Net Core 3.1 - Razor Pages) was developed to demonstrate the classes built to manage and work with the tables **SalesOrder** and **SalesOrderDetails** created by the scripts. Nothing too fancy, but to highlight general CRUD functionality using the classes.
+For this solution, a simple Web Application (.Net Core 3.1 - Razor Pages) was developed to demonstrate the classes built to implement the Employee Type Discount Calculator, using the Strategy Pattern, as well a Repository Pattern, UnitOfWork, SOLID Principles and clean code refactoring.
 
 Essentially, the application’s architecture was based using a simple implementation of **Clean Architecture** and **Domain-Driven Design (DDD)** principles. 
 
