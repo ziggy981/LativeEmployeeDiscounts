@@ -1,0 +1,13 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net5.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Lative.Domain\Lative.Domain.csproj" />
+    <ProjectReference Include="..\Lative.Persistence\Lative.Persistence.csproj" />
+    <ProjectReference Include="..\Lative.SharedKernel\Lative.SharedKernel.csproj" />
+  </ItemGroup>
+
+</Project>

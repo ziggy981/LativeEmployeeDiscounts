@@ -1,0 +1,61 @@
+﻿@page
+@using Lative.Domain
+@model IndexModel
+@{
+    ViewData["Title"] = "Home page";
+}
+
+<div class="text-center">
+    <h1 class="display-3 text-info">Lative Discount Calculator</h1>
+
+    <div class="container border" style="padding:30px;">
+        <form method="post">
+            <div class="row form-group">
+                <div class="offset-3 col-2">
+                    <label class="float-left">Employee Type</label>
+                </div>
+                <div class="col-4">
+                    <select asp-for="DiscCalcModel.EmployeeTypeId" asp-items="Html.GetEnumSelectList<Lative.Domain.Enums.EmployeeType>()" class="form-control">
+                        <option value="">Choose an Type</option>
+                    </select>
+                    <span asp-validation-for="DiscCalcModel.EmployeeTypeId" class="text-danger float-left"></span>
+                </div>
+            </div>
+            <div class="row form-group">
+                <div class="offset-3 col-2">
+                    <label class="float-left">Amount</label>
+                </div>
+                <div class="col-4">
+                    <input asp-for="DiscCalcModel.Amount" type="text" class="form-control" />
+                    <span asp-validation-for="DiscCalcModel.Amount" class="text-danger float-left"></span>
+                </div>
+            </div>
+            <div class="row form-group">
+                <div class="offset-3 col-2">
+                    <label class="float-left">Years Served</label>
+                </div>
+                <div class="col-4">
+                    <input asp-for="DiscCalcModel.YearsServed" type="text" class="form-control" />
+                    <span asp-validation-for="DiscCalcModel.YearsServed" class="text-danger float-left"></span>
+                </div>
+            </div>
+            @if (Model.DiscountResult.HasValue)
+            {
+                <div class="row form-group">
+                    <div class="offset-5 col-2 text-success font-weight-bold ">
+                        <label class="float-left">Discount = @Model.DiscountResult</label>
+                    </div>
+                </div>
+            }
+            <div class="row form-group">
+                <div class="offset-5 col-2">
+                    <input type="submit" class="btn btn-primary form-control" />
+                </div>
+            </div>
+        </form>
+
+    </div>
+</div>
+
+
+@{await Html.RenderPartialAsync("_ValidationScriptsPartial"); }
